@@ -21,6 +21,7 @@ then
     tar xf "rabbitmq-server-generic-unix-$rmq_version.tar.xz"
 fi
 
+export RABBITMQ_ALLOW_INPUT='true'
 export RABBITMQ_CONFIG_FILE="$script_dir/rabbitmq.conf"
 export LOG='debug'
 "$script_dir/rabbitmq_server-$rmq_version/sbin/rabbitmq-server"
